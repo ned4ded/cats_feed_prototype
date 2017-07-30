@@ -72,18 +72,23 @@ body {
   /*background-color: rgba(0, 255, 0, 0.5);*/
 }
 
-.feed-list__item-background {
+.feed-list__item-background::after {
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: calc(100% - 45px);
   display: block;
   box-sizing: border-box;
   background-color: white;
   background-image: url(../img/cat-background.png);
   background-repeat: no-repeat;
-  background-position: -28px 204px;
+  background-position: left -28px bottom -92px;
   border: 4px solid rgba(77, 175, 223, 1);
+  border-top: none;
   border-radius: 10px;
+  content: "";
+  top: 45px;
+  left: 0;
+  z-index: -2;
 }
 
 .feed-list__select-space {
@@ -96,45 +101,45 @@ body {
   z-index: 2;
 }
 
-.feed-list__select-space:hover + .feed-list__item-background {
-  border: 4px solid rgba(11, 193, 233, 1);
+.feed-list__select-space:hover + .feed-list__item-background::after {
+  border-color: rgba(11, 193, 233, 1);
 }
 
 .feed-list__select-space:hover + .feed-list__item-background .spec-weight {
   background-color: rgba(11, 193, 233, 1);
 }
 
-input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background,
-input[id="cat-feed-product-2"]:checked ~ ul li label[for="cat-feed-product-2"] + .feed-list__item-background,
-input[id="cat-feed-product-3"]:checked ~ ul li label[for="cat-feed-product-3"] + .feed-list__item-background {
-  border: 4px solid rgba(217, 22, 103, 1);
+input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after,
+input[id="cat-feed-product-2"]:checked ~ ul li label[for="cat-feed-product-2"] + .feed-list__item-background::after,
+input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background::after {
+  border-color: rgba(217, 22, 103, 1);
 }
 
 
-input[id="cat-feed-product-1"]:checked ~  ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background,
-input[id="cat-feed-product-2"]:checked ~  ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background,
-input[id="cat-feed-product-3"]:checked ~  ul label[for="cat-feed-product-3"]:hover + .feed-list__item-background {
-  border: 4px solid rgba(230, 46, 122, 1);
+input[id="cat-feed-product-1"]:checked ~  ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background::after,
+input[id="cat-feed-product-2"]:checked ~  ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background::after,
+input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background:hover::after {
+  border-color: rgba(230, 46, 122, 1);
 }
 
-input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background,
-input[id="cat-feed-product-2"]:disabled ~ ul li label[for="cat-feed-product-2"] + .feed-list__item-background,
-input[id="cat-feed-product-3"]:disabled ~ ul li label[for="cat-feed-product-3"] + .feed-list__item-background,
-input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background,
-input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background,
-input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"]:hover + .feed-list__item-background {
-  border: 4px solid rgba(103, 103, 103, 1);
+input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after,
+input[id="cat-feed-product-2"]:disabled ~ ul li label[for="cat-feed-product-2"] + .feed-list__item-background::after,
+input[id="cat-feed-product-3"]:disabled ~ ul li label[for="cat-feed-product-3"] + .feed-list__item-background::after,
+input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background::after,
+input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background::after,
+input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"]:hover + {
+  border-color: rgba(103, 103, 103, 1);
 }
 
 input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-weight,
 input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-weight,
-input[id="cat-feed-product-3"]:checked ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background .spec-weight {
+input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background .spec-weight {
   background-color: rgba(217, 22, 103, 1);
 }
 
 input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background .spec-weight,
 input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background .spec-weight,
-input[id="cat-feed-product-3"]:checked ~ ul label[for="cat-feed-product-3"]:hover + .feed-list__item-background .spec-weight {
+input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background:hover .spec-weight {
   background-color: rgba(230, 46, 122, 1);
 }
 
@@ -197,6 +202,7 @@ input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] {
 
 .spec-feature .spec-servings {
   margin-top: 15px;
+  margin-bottom: 265px;
 }
 
 .spec-feature .spec-weight,
@@ -249,29 +255,29 @@ input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] {
   display: none;
 }
 
-input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-agit--selected,
-input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-agit--disabled,
-input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-agit--selected,
-input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-agit--disabled,
-input[id="cat-feed-product-3"]:checked ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background .spec-agit--selected,
-input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background .spec-agit--disabled {
+input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background::after .spec-agit--selected,
+input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background::after .spec-agit--disabled,
+input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit--selected,
+input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit--disabled,
+input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background .spec-agit--selected,
+input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background::after .spec-agit--disabled {
   display: block;
 }
 
 /*try to fix, mb it could work without id*/
-input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-agit--default,
-input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-agit--default,
-input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-agit--default,
-input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-agit--default,
-input[id="cat-feed-product-3"]:checked ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background .spec-agit--default,
-input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background .spec-agit--default {
+input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background::after .spec-agit--default,
+input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background::after .spec-agit--default,
+input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit--default,
+input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit--default,
+input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background .spec-agit--default,
+input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background::after .spec-agit--default {
   display: none;
 }
 
 /*fix it*/
-input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-agit li,
-input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-agit li,
-input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background .spec-agit li {
+input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit li,
+input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background::after .spec-agit li,
+input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background::after .spec-agit li {
   color: rgba(255, 255, 102, 1);
 }
 
@@ -291,4 +297,12 @@ input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .
   color: rgba(22, 152, 217, 1);
   text-decoration: underline;
   text-decoration-style: dashed;
+}
+
+.background-cap {
+  position: absolute;
+  width: 320px;
+  height: 60px;
+  top: 0;
+  z-index: -1;
 }

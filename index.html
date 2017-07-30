@@ -13,10 +13,9 @@
 <body>
   <input class="hidden-input" type="checkbox" name="cat-feed" value="1" id="cat-feed-product-1" />
   <input class="hidden-input" type="checkbox" name="cat-feed" value="2" id="cat-feed-product-2" disabled/>
-  <input class="hidden-input" type="checkbox" name="cat-feed" value="3" id="cat-feed-product-3" />
   <ul class="feed-list">
     <h1 class="feed-heading">Ты сегодня покормил кота?</h1>
-    <li class="feed-list__item">
+    <!-- <li class="feed-list__item">
       <label class="feed-list__select-space" for="cat-feed-product-1"></label>
       <div class="feed-list__item-background">
         <table class="feed-list__item-spec">
@@ -51,8 +50,13 @@
             </tr>
           </tbody>
         </table>
+        <svg class="background-cap" width="0" height="0">
+          <path class="svg-test" fill-rule="evenodd" fill="white" stroke="rgba(77, 175, 223, 1)" stroke-width="4px" stroke-linecap="butt"
+          d="M2,60 L2,45 L45,2 L306,2 C312.627,2 318,7.372 318,14 L318,60"/>
+        </svg>
       </div>
     </li>
+
     <li class="feed-list__item">
       <label class="feed-list__select-space" for="cat-feed-product-2"></label>
       <div class="feed-list__item-background">
@@ -89,9 +93,15 @@
             </tr>
           </tbody>
         </table>
+        <svg class="background-cap" width="0" height="0">
+          <path class="svg-test" fill-rule="evenodd" fill="white" stroke="rgba(77, 175, 223, 1)" stroke-width="4px" stroke-linecap="butt"
+          d="M2,60 L2,45 L45,2 L306,2 C312.627,2 318,7.372 318,14 L318,60"/>
+        </svg>
       </div>
-    </li>
+    </li> -->
+
     <li class="feed-list__item">
+      <input class="hidden-input" type="checkbox" name="cat-feed" value="3" id="cat-feed-product-3" />
       <label class="feed-list__select-space" for="cat-feed-product-3"></label>
       <div class="feed-list__item-background">
         <table class="feed-list__item-spec">
@@ -127,6 +137,10 @@
             </tr>
           </tbody>
         </table>
+        <svg class="background-cap" width="0" height="0">
+          <path class="svg-test" fill-rule="evenodd" fill="white" stroke="rgba(77, 175, 223, 1)" stroke-width="4px" stroke-linecap="butt"
+          d="M2,60 L2,45 L45,2 L306,2 C312.627,2 318,7.372 318,14 L318,60"/>
+        </svg>
       </div>
 
     </li>
@@ -134,6 +148,12 @@
 
       </li> -->
   </ul>
+  <svg>
+    <defs id="background-cap">
+      <path class="svg-test" fill-rule="evenodd" fill="white" stroke="rgba(77, 175, 223, 1)" stroke-width="4px" stroke-linecap="butt"
+      d="M2,60 L2,45 L45,2 L306,2 C312.627,2 318,7.372 318,14 L318,60"/>
+    </defs>
+  </svg>
 </body>
 
 </html>
