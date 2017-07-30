@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Cat's feed prototype</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- /*<style>
+  @import url('https://fonts.googleapis.com/css?family=Exo+2:100,400');
+  </style>*/ -->
 </head>
+
 <body>
-    <ul class ="feed-list">
-      <li class ="feed-list__item">
-      <input class="hidden-input" type="checkbox" name="cat-feed" value ="1" id="cat-feed-product-1" />
-      <label for="cat-feed-product-1">
-        <div class ="feed-list__item-background">
-           <table class="feed-list__item-spec">
-             <thead class="spec-heading">
-                <td>Наименование</td>
-                <td>Сабнименование</td>
-                <td>Подарок</td>
-                <td>Вес</td>
-                <td>Ед. измерения веса</td>
-                <td>Слоган</td>
-             </thead>
-             <tbody class="spec-feature">
-               <tr>
-                <td class="spec-name">Нямушка</td>
-                <td class="spec-subname">с фуа-гра</td>
-                <td class="spec-servings">
-                  <ul>
-                    <li>10 порций</li>
-                    <li>мышь в подарок</li>
-                  </ul>
-                </td>
-                <td class="spec-weight">0,5</td>
-                <td class="spec-weight-unit-measurement">кг</td>
-                <td class="spec-slogan">Сказочное заморское яство</td>
-              </tr>
-             </tbody>
-           </table>
-         </div>
-      </label>
-      </li>
-      <li class ="feed-list__item">
-        <input class="hidden-input" type="checkbox" name="cat-feed" value ="2" id="cat-feed-product-2" />
-        <label class="feed-list__select-space" for="cat-feed-product-2">
-          <div class ="feed-list__item-background">
-            <table class="feed-list__item-spec">
-              <thead class="spec-heading">
-                 <td>Наименование</td>
-                 <td>Сабнименование</td>
-                 <td>Количество порций</td>
-                 <td>Вес</td>
-                 <td>Ед. измерения веса</td>
-                 <td>Слоган</td>
-                 <td>Агитация</td>
-              </thead>
-              <tbody class="spec-feature">
-                <tr>
-                 <td class="spec-name">Нямушка</td>
-                 <td class="spec-subname">с рыбой</td>
-                 <td class="spec-servings">
-                   <ul>
-                     <li>40 порций</li>
-                     <li>2 мыши в подарок</li>
-                   </ul>
-                 </td>
-                 <td class="spec-weight">2</td>
-                 <td class="spec-weight-unit-measurement">кг</td>
-                 <td class="spec-slogan">Сказочное заморское яство</td>
-                 <!-- <td class="spec-agit">
-                   <table>
-                     <tr class="spec-agit--default">
-                       <td>
-                         Чего сидишь? Порадуй котэ, купи.
-                       </td>
-                     </tr>
-                     <tr class="spec-agit--selected">
-                       <td>
-                         Печень утки разварная с артишоками.
-                       </td>
-                     </tr>
-                     <tr class="spec-agit--disabled">
-                       <td>
-                         Печалька, с фуа-гра закончился.
-                       </td>
-                     </tr>
-                   </table>
-                 </td> -->
-               </tr>
-              </tbody>
-            </table>
-          </div>
-        </label>
-      </li>
-      <li class ="feed-list__item">
-        <input class="hidden-input" type="checkbox" name="cat-feed" value ="3" id="cat-feed-product-3" />
-        <label class="feed-list__select-space" for="cat-feed-product-3">
-          <div class ="feed-list__item-background">
-            <table class="feed-list__item-spec">
-              <thead class="spec-heading">
-                 <td>Наименование</td>
-                 <td>Сабнименование</td>
-                 <td>Количество порций</td>
-                 <td>Вес</td>
-                 <td>Ед. измерения веса</td>
-                 <td>Слоган</td>
-              </thead>
-              <tbody class="spec-feature">
-                <tr>
-                 <td class="spec-name">Нямушка</td>
-                 <td class="spec-subname">с курой</td>
-                 <td class="spec-servings">
-                   <ul>
-                     <li>100 порций</li>
-                     <li>5 мышей в подарок</li>
-                     <li>Заказчик доволен</li>
-                   </ul>
-                 </td>
-                 <td class="spec-weight">5</td>
-                 <td class="spec-weight-unit-measurement">кг</td>
-                 <td class="spec-slogan">Сказочное заморское яство</td>
-               </tr>
-              </tbody>
-            </table>
-          </div>
-        </label>
-      </li>
-      <!-- <li class ="feed-list-item">
+  <input class="hidden-input" type="checkbox" name="cat-feed" value="1" id="cat-feed-product-1" />
+  <input class="hidden-input" type="checkbox" name="cat-feed" value="2" id="cat-feed-product-2" disabled/>
+  <input class="hidden-input" type="checkbox" name="cat-feed" value="3" id="cat-feed-product-3" />
+  <ul class="feed-list">
+    <h1 class="feed-heading">Ты сегодня покормил кота?</h1>
+    <li class="feed-list__item">
+      <label class="feed-list__select-space" for="cat-feed-product-1"></label>
+      <div class="feed-list__item-background">
+        <table class="feed-list__item-spec">
+          <thead class="spec-heading">
+            <td>Наименование</td>
+            <td>Сабнименование</td>
+            <td>Подарок</td>
+            <td>Вес</td>
+            <td>Ед. измерения веса</td>
+            <td>Слоган</td>
+          </thead>
+          <tbody class="spec-feature">
+            <tr>
+              <td class="spec-name">Нямушка</td>
+              <td class="spec-subname">с фуа-гра</td>
+              <td class="spec-servings">
+                <ul>
+                  <li>10 порций</li>
+                  <li>мышь в подарок</li>
+                </ul>
+              </td>
+              <td class="spec-weight">0,5</td>
+              <td class="spec-weight-unit-measurement">кг</td>
+              <td class="spec-slogan">Сказочное заморское яство</td>
+              <td class="spec-agit">
+                <ul>
+                  <li class="spec-agit--default">Чего сидишь? Порадуй котэ, <label class ="label-link" for="cat-feed-product-1">купи.</label></li>
+                  <li class="spec-agit--selected">Печень утки разварная с артишоками.</li>
+                  <li class="spec-agit--disabled">Печалька, с фуа-гра закончился.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li class="feed-list__item">
+      <label class="feed-list__select-space" for="cat-feed-product-2"></label>
+      <div class="feed-list__item-background">
+        <table class="feed-list__item-spec">
+          <thead class="spec-heading">
+            <td>Наименование</td>
+            <td>Сабнименование</td>
+            <td>Количество порций</td>
+            <td>Вес</td>
+            <td>Ед. измерения веса</td>
+            <td>Слоган</td>
+            <td>Агитация</td>
+          </thead>
+          <tbody class="spec-feature">
+            <tr>
+              <td class="spec-name">Нямушка</td>
+              <td class="spec-subname">с рыбой</td>
+              <td class="spec-servings">
+                <ul>
+                  <li>40 порций</li>
+                  <li>2 мыши в подарок</li>
+                </ul>
+              </td>
+              <td class="spec-weight">2</td>
+              <td class="spec-weight-unit-measurement">кг</td>
+              <td class="spec-slogan">Сказочное заморское яство</td>
+              <td class="spec-agit">
+                <ul>
+                  <li class="spec-agit--default">Чего сидишь? Порадуй котэ, <label class ="label-link"  for="cat-feed-product-2">купи.</label></li>
+                  <li class="spec-agit--selected">Головы щучьи с чесноком да свежайшая сёмгушка.</li>
+                  <li class="spec-agit--disabled">Печалька, с рыбой закончился.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li class="feed-list__item">
+      <label class="feed-list__select-space" for="cat-feed-product-3"></label>
+      <div class="feed-list__item-background">
+        <table class="feed-list__item-spec">
+          <thead class="spec-heading">
+            <td>Наименование</td>
+            <td>Сабнименование</td>
+            <td>Количество порций</td>
+            <td>Вес</td>
+            <td>Ед. измерения веса</td>
+            <td>Слоган</td>
+          </thead>
+          <tbody class="spec-feature">
+            <tr>
+              <td class="spec-name">Нямушка</td>
+              <td class="spec-subname">с курой</td>
+              <td class="spec-servings">
+                <ul>
+                  <li>100 порций</li>
+                  <li>5 мышей в подарок</li>
+                  <li>Заказчик доволен</li>
+                </ul>
+              </td>
+              <td class="spec-weight">5</td>
+              <td class="spec-weight-unit-measurement">кг</td>
+              <td class="spec-slogan">Сказочное заморское яство</td>
+              <td class="spec-agit">
+                <ul>
+                  <li class="spec-agit--default">Чего сидишь? Порадуй котэ, <label class ="label-link"  for="cat-feed-product-3" >купи.</label></li>
+                  <li class="spec-agit--selected">Филе из цыплят с трюфелями в бульоне.</li>
+                  <li class="spec-agit--disabled">Печалька, с курой закончился.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </li>
+    <!-- <li class ="feed-list-item">
 
       </li> -->
-    </ul>
+  </ul>
 </body>
+
 </html>
