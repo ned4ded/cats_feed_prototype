@@ -109,16 +109,12 @@ body {
   background-color: rgba(11, 193, 233, 1);
 }
 
-input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after,
-input[id="cat-feed-product-2"]:checked ~ ul li label[for="cat-feed-product-2"] + .feed-list__item-background::after,
-input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background::after {
+input[name="cat-feed"]:checked ~ .feed-list__item-background::after {
   border-color: rgba(217, 22, 103, 1);
 }
 
 
-input[id="cat-feed-product-1"]:checked ~  ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background::after,
-input[id="cat-feed-product-2"]:checked ~  ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background::after,
-input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background:hover::after {
+input[name="cat-feed"]:checked ~ label:hover ~ .feed-list__item-background::after {
   border-color: rgba(230, 46, 122, 1);
 }
 
@@ -131,15 +127,11 @@ input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"]:hov
   border-color: rgba(103, 103, 103, 1);
 }
 
-input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background .spec-weight,
-input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background .spec-weight,
-input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background .spec-weight {
+input[name="cat-feed"]:checked ~ .feed-list__item-background .spec-weight {
   background-color: rgba(217, 22, 103, 1);
 }
 
-input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"]:hover + .feed-list__item-background .spec-weight,
-input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"]:hover + .feed-list__item-background .spec-weight,
-input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background:hover .spec-weight {
+input[name="cat-feed"]:checked ~ label:hover ~ .feed-list__item-background .spec-weight {
   background-color: rgba(230, 46, 122, 1);
 }
 
@@ -259,7 +251,7 @@ input[id="cat-feed-product-2"]:checked ~ ul label[for="cat-feed-product-2"] + .f
 input[id="cat-feed-product-2"]:disabled ~ ul label[for="cat-feed-product-2"] + .feed-list__item-background::after .spec-agit--disabled,
 input[id="cat-feed-product-1"]:checked ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit--selected,
 input[id="cat-feed-product-1"]:disabled ~ ul label[for="cat-feed-product-1"] + .feed-list__item-background::after .spec-agit--disabled,
-input[id="cat-feed-product-3"]:checked ~ .feed-list__item-background .spec-agit--selected,
+input[name="cat-feed"]:checked ~ .feed-list__item-background .spec-agit .spec-agit--selected,
 input[id="cat-feed-product-3"]:disabled ~ ul label[for="cat-feed-product-3"] + .feed-list__item-background::after .spec-agit--disabled {
   display: block;
 }
